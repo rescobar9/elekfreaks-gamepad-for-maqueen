@@ -1,5 +1,14 @@
-joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P12, joystickbit.ButtonType.down, function () {
-	
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("LEDR")
+    basic.showString("LEDR")
+})
+input.onButtonPressed(Button.AB, function () {
+    radio.sendString("S")
+    basic.showString("S")
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("LEDL")
+    basic.showString("LEDL")
 })
 radio.setGroup(1)
 basic.forever(function () {
